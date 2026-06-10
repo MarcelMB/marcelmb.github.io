@@ -86,6 +86,9 @@ nav.links a:hover{color:var(--ink);text-decoration:none}
 .card-side ul{list-style:none}
 .card-side li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink-soft)}
 .card-side li:last-child{border-bottom:0}.card-side li b{color:var(--ink);font-weight:600}
+.glance-skills{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.glance-skills .sk{font-size:12.5px;background:#fff;border:1px solid var(--line);padding:4px 10px;border-radius:7px;color:var(--ink-soft);font-weight:600;cursor:pointer;transition:.15s}
+.glance-skills .sk:hover,.glance-skills .sk:focus-within{border-color:var(--accent);color:var(--accent-dk);background:var(--accent-soft);outline:none}
 @media(max-width:880px){.about-grid{grid-template-columns:1fr;gap:28px}}
 
 .proj{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;padding:34px 0;border-bottom:1px solid var(--line)}
@@ -129,12 +132,18 @@ nav.links a:hover{color:var(--ink);text-decoration:none}
 .skill-card h3{font-size:17px;margin-bottom:14px;display:flex;align-items:center;gap:10px}
 .skill-card h3 .dot{width:9px;height:9px;border-radius:50%;background:var(--accent)}
 .skill-card .tags{display:flex;flex-wrap:wrap;gap:8px}
-.skill-card .tags span{font-size:13.5px;background:#fff;border:1px solid var(--line);padding:6px 12px;border-radius:8px;color:var(--ink-soft);font-weight:500;position:relative;cursor:help;transition:.15s}
-.skill-card .tags span[data-tip]:hover,.skill-card .tags span[data-tip]:focus{border-color:var(--accent);color:var(--accent-dk);background:var(--accent-soft);outline:none}
-.skill-card .tags span[data-tip]::after{content:attr(data-tip);position:absolute;left:0;bottom:calc(100% + 10px);transform:translateY(4px);background:var(--ink);color:#fff;font-size:12.5px;font-weight:500;line-height:1.45;white-space:normal;width:max-content;max-width:240px;text-align:left;padding:8px 11px;border-radius:8px;box-shadow:var(--shadow-lg);opacity:0;pointer-events:none;transition:opacity .15s,transform .15s;z-index:30}
-.skill-card .tags span[data-tip]::before{content:"";position:absolute;left:18px;bottom:calc(100% + 4px);transform:translateX(-50%);border:6px solid transparent;border-top-color:var(--ink);opacity:0;transition:opacity .15s;z-index:30}
-.skill-card .tags span[data-tip]:hover::after,.skill-card .tags span[data-tip]:focus::after{opacity:1;transform:translateY(0)}
-.skill-card .tags span[data-tip]:hover::before,.skill-card .tags span[data-tip]:focus::before{opacity:1}
+.skill-card .tags span{font-size:13.5px;background:#fff;border:1px solid var(--line);padding:6px 12px;border-radius:8px;color:var(--ink-soft);font-weight:500;position:relative;cursor:pointer;transition:.15s}
+.skill-card .tags span.sk:hover,.skill-card .tags span.sk:focus-within{border-color:var(--accent);color:var(--accent-dk);background:var(--accent-soft);outline:none}
+.sk{position:relative}
+.sk .tip{position:absolute;left:0;bottom:100%;z-index:40;text-align:left;display:flex;flex-direction:column;width:max-content;max-width:260px;padding-bottom:9px;opacity:0;visibility:hidden;transform:translateY(4px);transition:opacity .15s,transform .15s;filter:drop-shadow(0 10px 22px rgba(20,24,29,.20))}
+.sk .tip>i{background:var(--ink);color:#aeb8c6;font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:8px 12px 5px}
+.sk .tip>a,.sk .tip>em{background:var(--ink);color:#fff;font-size:13px;font-weight:500;font-style:normal;line-height:1.3;padding:6px 12px;text-decoration:none;display:block}
+.sk .tip>:first-child{border-radius:9px 9px 0 0}
+.sk .tip>a:last-of-type,.sk .tip>em:last-of-type{border-radius:0 0 9px 9px;padding-bottom:9px}
+.sk .tip>em{color:#cdd5e0}
+.sk .tip>a:hover{background:var(--accent);color:#fff}
+.sk .tip>a[target]::after{content:" ↗";opacity:.6;font-size:11px}
+.sk:hover .tip,.sk:focus-within .tip{opacity:1;visibility:visible;transform:translateY(0)}
 .badge-award{display:inline-block;font-size:11.5px;font-weight:600;color:var(--accent-dk);background:var(--accent-soft);border:1px solid #c7dbfb;padding:2px 9px;border-radius:999px;margin-left:8px;vertical-align:middle}
 @media(max-width:680px){.skills-grid{grid-template-columns:1fr}}
 
@@ -245,9 +254,9 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
         <ul>
           <li><b>Now</b><br>Postdoc, <a href="https://aharoni-lab.com/" target="_blank" rel="noopener">Aharoni Lab</a>, UCLA</li>
           <li><b>Focus</b><br>Wireless imaging · open-source hardware · scientific software</li>
-          <li><b>Toolkit</b><br>Python · MATLAB · C/C++ · CAD/3D printing · electronics · ML</li>
+          <li><b>Core skills</b> <span style="color:var(--ink-faint);font-size:12.5px">(hover to explore)</span><div class="glance-skills"><span class="sk" tabindex="0">Python<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#soft-mio">mio</a><a href="#soft-catune">CaTune</a></span></span><span class="sk" tabindex="0">1-photon imaging<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#soft-catune">CaTune</a><a href="#soft-cave">CAVE</a></span></span><span class="sk" tabindex="0">Wireless hardware<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a></span></span><span class="sk" tabindex="0">Optical design<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#proj-ecog">µECoG array</a></span></span><span class="sk" tabindex="0">CAD &amp; 3D printing<span class="tip"><i>Used in</i><a href="#proj-tetrodrive">TetrODrive</a><a href="#proj-miniscope">Miniscope Zero</a></span></span></div></li>
           <li><b>Based in</b><br>Los Angeles, USA</li>
-          <li><b>Languages</b><br>German (native) · English (fluent)</li>
+          <li><b>Languages</b><br>German &amp; English (native)</li>
         </ul>
       </aside>
     </div>
@@ -264,7 +273,7 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
     <div class="proj">
       <div class="ptext">
         <span class="ptag">Current · UCLA · Co-first author (in preparation)</span>
-        <h3>Miniscope Zero — fully wireless brain imaging</h3>
+        <h3 id="proj-miniscope">Miniscope Zero — fully wireless brain imaging</h3>
         <div class="venue">Sasatani &amp; Brosch et al. · <a href="https://aharoni-lab.com/" target="_blank" rel="noopener">Aharoni Lab</a>, UCLA</div>
         <p class="plain"><b>In plain terms:</b> a tiny microscope worn on a mouse's head lets us watch individual brain cells light up while the animal moves freely — and we made it work with no cables or heavy batteries holding it back.</p>
         <p>A head-mounted, single-photon miniature microscope that records single-cell neural dynamics in freely behaving mice with <strong>no tether and no bulky battery</strong>. Power is delivered wirelessly via Quasistatic Cavity Resonance (&gt;500&nbsp;mW over 2,500&nbsp;cm²) and data streams over an 8&nbsp;Mbps optical uplink. Upgraded optics deliver <strong>2.6× the light-collection</strong> of the UCLA Miniscope v4, enabling multi-hour CA1 recordings during 3D-maze navigation and multi-animal social interaction.</p>
@@ -291,7 +300,7 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
     <div class="proj rev">
       <div class="ptext">
         <span class="ptag">First author · J. Neural Eng. 2021</span>
-        <h3>TetrODrive — an open-source microdrive</h3>
+        <h3 id="proj-tetrodrive">TetrODrive — an open-source microdrive</h3>
         <div class="venue">Brosch, Vlasenko, Ohl &amp; Lippert · J. Neural Eng. 18:046030</div>
         <p class="plain"><b>In plain terms:</b> a small, 3D-printed gadget that gently lowers hair-thin sensors into the brain to listen to single neurons — built for under $25 instead of the usual several hundred.</p>
         <p>A 3D-printable microdrive for combined electrophysiology and optophysiology in mice. It weighs <strong>under 1.5&nbsp;g</strong>, assembles in <strong>15 minutes</strong>, and costs <strong>under $25</strong> — versus hundreds for commercial units. A key innovation mechanically decouples plugging forces from the drive body for stable recordings across sessions, and a movable fiber enables fiber photometry. We validated it with optogenetically identified single units in the ventral tegmental area.</p>
@@ -310,7 +319,7 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
     <div class="proj">
       <div class="ptext">
         <span class="ptag">First author · J. Neural Eng. 2020</span>
-        <h3>Transparent µECoG array</h3>
+        <h3 id="proj-ecog">Transparent µECoG array</h3>
         <div class="venue">Brosch et al. · J. Neural Eng. 17:046014</div>
         <p class="plain"><b>In plain terms:</b> a see-through electrode film that rests on the brain's surface, so we can record its electrical activity and shine light through it at the same time — thinner than a human hair and stable for months.</p>
         <p>An optically transparent multi-electrode array for simultaneous surface electrophysiology and optogenetics/imaging. Built from ultra-thin polyimide with chrome-gold-platinum traces, the array is just <strong>6.5&nbsp;µm thick</strong> and ~<strong>83% transparent</strong> to blue light, while rejecting opto-electric artifacts. It records stable ECoG <strong>over months</strong> without measurable degradation and maps the tonotopic organization of the curved rodent auditory cortex — a robust, low-cost alternative to fragile graphene/ITO devices.</p>
@@ -332,19 +341,19 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
     <h2 class="sec-title">Code that powers the science</h2>
     <p class="sec-intro">Beyond hardware, I build and contribute to the software stack around neural imaging — from data acquisition to analysis GUIs — much of it open source and used across the Miniscope community.</p>
     <div class="soft-grid">
-      <a class="soft-card reveal" href="https://miniscope.github.io/CaLab/CaTune/" target="_blank" rel="noopener">
+      <a id="soft-catune" class="soft-card reveal" href="https://miniscope.github.io/CaLab/CaTune/" target="_blank" rel="noopener">
         <div class="k">GUI · Aharoni Lab collaboration</div>
         <h3>CaTune</h3>
         <p>An interactive calcium-imaging deconvolution GUI that lets researchers tune and visualize spike-inference parameters on their own recordings — built in collaboration with the Aharoni Lab.</p>
         <span class="lk">Launch CaTune ↗</span>
       </a>
-      <a class="soft-card reveal" href="https://github.com/miniscope/mio" target="_blank" rel="noopener">
+      <a id="soft-mio" class="soft-card reveal" href="https://github.com/miniscope/mio" target="_blank" rel="noopener">
         <div class="k">Contributor · Open source</div>
         <h3>mio (Miniscope-IO)</h3>
         <p>Next-generation data-acquisition software for Miniscope devices. I help develop the acquisition and streaming pipeline that handles incoming neural data and outgoing device commands.</p>
         <span class="lk">View on GitHub ↗</span>
       </a>
-      <a class="soft-card reveal" href="https://www.frontiersin.org/articles/10.3389/fnins.2018.00958/full" target="_blank" rel="noopener">
+      <a id="soft-cave" class="soft-card reveal" href="https://www.frontiersin.org/articles/10.3389/fnins.2018.00958/full" target="_blank" rel="noopener">
         <div class="k">Co-author · MATLAB tool</div>
         <h3>CAVE</h3>
         <p>An open-source MATLAB tool for combined analysis of head-mounted calcium imaging and behavior, published in Frontiers in Neuroscience (2018).</p>
@@ -363,25 +372,25 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
       <div class="skill-card reveal">
         <h3><span class="dot"></span>Software &amp; Programming</h3>
         <div class="tags">
-          <span tabindex="0" data-tip="Used in: Miniscope Zero analysis · mio · CaTune">Python</span><span tabindex="0" data-tip="Used in: Miniscope Zero data analysis · mio">Pandas / NumPy</span><span tabindex="0" data-tip="Used in: Data Analytics training (Ironhack)">scikit-learn (ML)</span><span tabindex="0" data-tip="Used in: CAVE · µECoG &amp; MSc-thesis analysis">MATLAB</span><span tabindex="0" data-tip="Used in: Miniscope Zero firmware · mio">C / C++ (embedded)</span><span tabindex="0" data-tip="Used in: Data Analytics training (Ironhack)">MySQL</span><span tabindex="0" data-tip="Used in: CaTune · CAVE · mio">GUI development</span><span tabindex="0" data-tip="Used in: Miniscope Zero · CAVE · µECoG array">Signal &amp; image processing</span><span tabindex="0" data-tip="Used in: mio · CaTune · TetrODrive (all open source)">Git / GitHub</span><span tabindex="0" data-tip="Used in: mio · TetrODrive · CAVE">Open-source maintenance</span><span tabindex="0" data-tip="Used in: Data Analytics training (Ironhack)">APIs &amp; web scraping</span><span tabindex="0" data-tip="Used in: CaTune · CAVE · Miniscope Zero">Data visualization</span>
+          <span class="sk" tabindex="0">Python<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#soft-mio">mio</a><a href="#soft-catune">CaTune</a></span></span><span class="sk" tabindex="0">Pandas / NumPy<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#soft-mio">mio</a></span></span><span class="sk" tabindex="0">scikit-learn (ML)<span class="tip"><i>From</i><a href="#experience">Data Analytics training (Ironhack)</a></span></span><span class="sk" tabindex="0">MATLAB<span class="tip"><i>Used in</i><a href="#soft-cave">CAVE</a><a href="#proj-ecog">µECoG array</a><a href="#experience">MSc thesis</a></span></span><span class="sk" tabindex="0">C / C++ (embedded)<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#soft-mio">mio</a></span></span><span class="sk" tabindex="0">MySQL<span class="tip"><i>From</i><a href="#experience">Data Analytics training (Ironhack)</a></span></span><span class="sk" tabindex="0">GUI development<span class="tip"><i>Used in</i><a href="#soft-catune">CaTune</a><a href="#soft-cave">CAVE</a><a href="#soft-mio">mio</a></span></span><span class="sk" tabindex="0">Signal &amp; image processing<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#soft-cave">CAVE</a><a href="#proj-ecog">µECoG array</a></span></span><span class="sk" tabindex="0">Git / GitHub<span class="tip"><i>Used in</i><a href="#soft-mio">mio</a><a href="#soft-catune">CaTune</a><a href="#proj-tetrodrive">TetrODrive</a></span></span><span class="sk" tabindex="0">Open-source maintenance<span class="tip"><i>Used in</i><a href="#soft-mio">mio</a><a href="#proj-tetrodrive">TetrODrive</a><a href="#soft-cave">CAVE</a></span></span><span class="sk" tabindex="0">APIs &amp; web scraping<span class="tip"><i>From</i><a href="#experience">Data Analytics training (Ironhack)</a></span></span><span class="sk" tabindex="0">Data visualization<span class="tip"><i>Used in</i><a href="#soft-catune">CaTune</a><a href="#soft-cave">CAVE</a><a href="#proj-miniscope">Miniscope Zero</a></span></span>
         </div>
       </div>
       <div class="skill-card reveal">
         <h3><span class="dot"></span>Hardware &amp; Engineering</h3>
         <div class="tags">
-          <span tabindex="0" data-tip="Used in: TetrODrive · Miniscope Zero">CAD &amp; 3D printing</span><span tabindex="0" data-tip="Used in: Transparent µECoG array">Microfabrication</span><span tabindex="0" data-tip="Used in: Miniscope Zero · TetrODrive">PCB / electronics</span><span tabindex="0" data-tip="Used in: Miniscope Zero · µECoG array">Optical design</span><span tabindex="0" data-tip="Used in: Miniscope Zero">Embedded firmware</span><span tabindex="0" data-tip="Used in: Miniscope Zero">Wireless power &amp; data</span><span tabindex="0" data-tip="Used in: TetrODrive · Miniscope Zero">Rapid prototyping</span><span tabindex="0" data-tip="Used in: Miniscope Zero · TetrODrive · µECoG array">Device validation</span>
+          <span class="sk" tabindex="0">CAD &amp; 3D printing<span class="tip"><i>Used in</i><a href="#proj-tetrodrive">TetrODrive</a><a href="#proj-miniscope">Miniscope Zero</a></span></span><span class="sk" tabindex="0">Microfabrication<span class="tip"><i>Used in</i><a href="#proj-ecog">µECoG array</a></span></span><span class="sk" tabindex="0">PCB / electronics<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#proj-tetrodrive">TetrODrive</a></span></span><span class="sk" tabindex="0">Optical design<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#proj-ecog">µECoG array</a></span></span><span class="sk" tabindex="0">Embedded firmware<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a></span></span><span class="sk" tabindex="0">Wireless power &amp; data<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a></span></span><span class="sk" tabindex="0">Rapid prototyping<span class="tip"><i>Used in</i><a href="#proj-tetrodrive">TetrODrive</a><a href="#proj-miniscope">Miniscope Zero</a></span></span><span class="sk" tabindex="0">Device validation<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#proj-tetrodrive">TetrODrive</a><a href="#proj-ecog">µECoG array</a></span></span>
         </div>
       </div>
       <div class="skill-card reveal">
         <h3><span class="dot"></span>Neuroscience Methods</h3>
         <div class="tags">
-          <span tabindex="0" data-tip="Used in: Miniscope Zero · CaTune · CAVE">1-photon calcium imaging</span><span tabindex="0" data-tip="Used in: TetrODrive · µECoG array · MSc thesis">In vivo electrophysiology</span><span tabindex="0" data-tip="Used in: TetrODrive · µECoG array">Optogenetics</span><span tabindex="0" data-tip="Used in: µECoG array · TetrODrive · MSc thesis">ECoG / tetrodes</span><span tabindex="0" data-tip="Used in: TetrODrive">Fiber photometry</span><span tabindex="0" data-tip="Used in: Miniscope Zero · TetrODrive · µECoG array">Stereotactic surgery</span><span tabindex="0" data-tip="Used in: µECoG array · TetrODrive">Histology</span><span tabindex="0" data-tip="Used in: Miniscope Zero · MSc &amp; BSc theses">Behavioral assays</span>
+          <span class="sk" tabindex="0">1-photon calcium imaging<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#soft-catune">CaTune</a><a href="#soft-cave">CAVE</a></span></span><span class="sk" tabindex="0">In vivo electrophysiology<span class="tip"><i>Used in</i><a href="#proj-tetrodrive">TetrODrive</a><a href="#proj-ecog">µECoG array</a><a href="#experience">MSc thesis</a></span></span><span class="sk" tabindex="0">Optogenetics<span class="tip"><i>Used in</i><a href="#proj-tetrodrive">TetrODrive</a><a href="#proj-ecog">µECoG array</a></span></span><span class="sk" tabindex="0">ECoG / tetrodes<span class="tip"><i>Used in</i><a href="#proj-ecog">µECoG array</a><a href="#proj-tetrodrive">TetrODrive</a><a href="#experience">MSc thesis</a></span></span><span class="sk" tabindex="0">Fiber photometry<span class="tip"><i>Used in</i><a href="#proj-tetrodrive">TetrODrive</a></span></span><span class="sk" tabindex="0">Stereotactic surgery<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#proj-tetrodrive">TetrODrive</a><a href="#proj-ecog">µECoG array</a></span></span><span class="sk" tabindex="0">Histology<span class="tip"><i>Used in</i><a href="#proj-ecog">µECoG array</a><a href="#proj-tetrodrive">TetrODrive</a></span></span><span class="sk" tabindex="0">Behavioral assays<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#experience">MSc &amp; BSc theses</a></span></span>
         </div>
       </div>
       <div class="skill-card reveal">
         <h3><span class="dot"></span>Communication &amp; Leadership</h3>
         <div class="tags">
-          <span tabindex="0" data-tip="Behind: 7+ publications &amp; three theses">Scientific writing</span><span tabindex="0" data-tip="Journal manuscript reviewer">Peer review (Nature Methods)</span><span tabindex="0" data-tip="German Neuroscience Meeting · Physiology Society">Invited talks</span><span tabindex="0" data-tip="Co-founded SimpleNeuro science blog · public outreach">Science communication</span><span tabindex="0" data-tip="PhD student representative (50+ students)">Mentoring</span><span tabindex="0" data-tip="Used in: Miniscope Zero · TetrODrive">Project leadership</span><span tabindex="0" data-tip="Miniscope Zero (UCLA ↔ Univ. Tokyo)">Cross-disciplinary collaboration</span>
+          <span class="sk" tabindex="0">Scientific writing<span class="tip"><i>Behind</i><a href="#publications">7+ publications</a><a href="#experience">Three theses</a></span></span><span class="sk" tabindex="0">Peer review (Nature Methods)<span class="tip"><i>Role</i><em>Journal manuscript reviewer</em></span></span><span class="sk" tabindex="0">Invited talks<span class="tip"><i>Includes</i><em>German Neuroscience Meeting</em><em>German Physiology Society</em></span></span><span class="sk" tabindex="0">Science communication<span class="tip"><i>Founded</i><a href="https://cbbsgp.med.ovgu.de/simpleneuro-blog-of-lin-phd-students/" target="_blank" rel="noopener">SimpleNeuro blog</a></span></span><span class="sk" tabindex="0">Mentoring<span class="tip"><i>Role</i><a href="#experience">PhD representative (50+ students)</a></span></span><span class="sk" tabindex="0">Project leadership<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#proj-tetrodrive">TetrODrive</a></span></span><span class="sk" tabindex="0">Cross-disciplinary collaboration<span class="tip"><i>Example</i><a href="#proj-miniscope">Miniscope Zero</a></span></span>
         </div>
       </div>
     </div>
