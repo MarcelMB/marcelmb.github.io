@@ -6,6 +6,7 @@
 <title>Dr. Marcel Brosch — Neuroscientist & Neural Engineer</title>
 <meta name="description" content="Dr. Marcel Brosch — neuroscientist and neural-engineering tool developer. Postdoctoral researcher at UCLA building wireless miniature microscopes, open-source neural devices, and scientific software." />
 <link rel="canonical" href="https://marcelbrosch.com/" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Crect%20width%3D%27100%27%20height%3D%27100%27%20rx%3D%2722%27%20fill%3D%27%231f6feb%27/%3E%3Ctext%20x%3D%2750%27%20y%3D%2754%27%20dy%3D%27.05em%27%20text-anchor%3D%27middle%27%20font-family%3D%27Helvetica%2CArial%2Csans-serif%27%20font-size%3D%2744%27%20font-weight%3D%27700%27%20fill%3D%27%23ffffff%27%3EMB%3C/text%3E%3C/svg%3E" />
 <meta property="og:title" content="Dr. Marcel Brosch — Neuroscientist & Neural Engineer" />
 <meta property="og:description" content="Building tools that record the brain: wireless miniature microscopes, transparent electrode arrays, open-source hardware, and scientific software." />
 <meta property="og:type" content="website" />
@@ -93,9 +94,16 @@ nav.links a:hover{color:var(--ink);text-decoration:none}
 .ptag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:4px 12px;border-radius:999px;margin-bottom:14px}
 .proj h3{font-size:24px;margin-bottom:8px}
 .proj .venue{font-size:14px;color:var(--ink-faint);margin-bottom:14px;font-weight:500}
+.plain{background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:8px;padding:11px 15px;font-size:14.5px;color:var(--ink-soft);margin-bottom:16px;line-height:1.55}
+.plain b{color:var(--accent-dk);font-weight:700;letter-spacing:.02em}
+.pub .meta .lk{margin-top:7px;font-size:13px}
+.pub .meta .lk a{font-weight:600;margin-right:16px;color:var(--accent)}
+.pub .meta .lk .cb{color:var(--ink-faint);font-weight:500}
 .proj p{color:var(--ink-soft);font-size:16px;margin-bottom:16px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
 .chip{font-size:13px;background:var(--bg-soft);border:1px solid var(--line);color:var(--ink-soft);padding:5px 12px;border-radius:8px;font-weight:500}
+.plinks{display:flex;gap:18px;font-size:14px;font-weight:600;flex-wrap:wrap}
+.plinks a{color:var(--accent)}
 .pfig{border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
 .pfig img,.pfig video{width:100%;display:block}
 .pfig figcaption{font-size:12.5px;color:var(--ink-faint);padding:10px 14px;border-top:1px solid var(--line);background:var(--bg-soft)}
@@ -194,8 +202,8 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
       <div class="social">
         <a href="https://www.linkedin.com/in/marcel-brosch/" target="_blank" rel="noopener">LinkedIn ↗</a>
         <a href="https://github.com/miniscope" target="_blank" rel="noopener">GitHub ↗</a>
-        <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar ↗</a>
-        <a href="https://orcid.org/" target="_blank" rel="noopener">ORCID ↗</a>
+        <a href="https://scholar.google.com/citations?user=54OSLKgAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>
+        <a href="https://orcid.org/0000-0001-7471-8646" target="_blank" rel="noopener">ORCID ↗</a>
       </div>
     </div>
     <div class="portrait-wrap">
@@ -209,7 +217,7 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
     <div class="stats">
       <div class="stat reveal"><div class="n">PhD</div><div class="l">summa cum laude, Neuroscience</div></div>
       <div class="stat reveal"><div class="n">7+</div><div class="l">peer-reviewed publications</div></div>
-      <div class="stat reveal"><div class="n">10+</div><div class="l">years building neural tools</div></div>
+      <div class="stat reveal"><div class="n">150+</div><div class="l">citations · h-index 4 (Scholar)</div></div>
       <div class="stat reveal"><div class="n">UCLA</div><div class="l">current postdoc, Aharoni Lab</div></div>
     </div>
   </div>
@@ -252,6 +260,7 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
         <span class="ptag">Current · UCLA · Co-first author (in preparation)</span>
         <h3>Miniscope Zero — fully wireless brain imaging</h3>
         <div class="venue">Sasatani &amp; Brosch et al. · <a href="https://aharoni-lab.com/" target="_blank" rel="noopener">Aharoni Lab</a>, UCLA</div>
+        <p class="plain"><b>In plain terms:</b> a tiny microscope worn on a mouse's head lets us watch individual brain cells light up while the animal moves freely — and we made it work with no cables or heavy batteries holding it back.</p>
         <p>A head-mounted, single-photon miniature microscope that records single-cell neural dynamics in freely behaving mice with <strong>no tether and no bulky battery</strong>. Power is delivered wirelessly via Quasistatic Cavity Resonance (&gt;500&nbsp;mW over 2,500&nbsp;cm²) and data streams over an 8&nbsp;Mbps optical uplink. Upgraded optics deliver <strong>2.6× the light-collection</strong> of the UCLA Miniscope v4, enabling multi-hour CA1 recordings during 3D-maze navigation and multi-animal social interaction.</p>
         <p style="font-size:15px;color:var(--ink-faint)">Co-first-authored with <a href="https://www.takuyasasatani.com/" target="_blank" rel="noopener">Takuya Sasatani</a> (University of Tokyo). I led the <strong style="color:var(--ink-soft)">miniature microscope and wireless data link</strong>; wireless power was developed in collaboration with Takuya.</p>
         <div class="chips">
@@ -278,10 +287,12 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
         <span class="ptag">First author · J. Neural Eng. 2021</span>
         <h3>TetrODrive — an open-source microdrive</h3>
         <div class="venue">Brosch, Vlasenko, Ohl &amp; Lippert · J. Neural Eng. 18:046030</div>
+        <p class="plain"><b>In plain terms:</b> a small, 3D-printed gadget that gently lowers hair-thin sensors into the brain to listen to single neurons — built for under $25 instead of the usual several hundred.</p>
         <p>A 3D-printable microdrive for combined electrophysiology and optophysiology in mice. It weighs <strong>under 1.5&nbsp;g</strong>, assembles in <strong>15 minutes</strong>, and costs <strong>under $25</strong> — versus hundreds for commercial units. A key innovation mechanically decouples plugging forces from the drive body for stable recordings across sessions, and a movable fiber enables fiber photometry. We validated it with optogenetically identified single units in the ventral tegmental area.</p>
         <div class="chips">
           <span class="chip">3D printing / CAD</span><span class="chip">Mechanical design</span><span class="chip">Optogenetics / optotagging</span><span class="chip">In vivo electrophysiology</span>
         </div>
+        <div class="plinks"><a href="https://github.com/MarcelMB/TetrODrive" target="_blank" rel="noopener">GitHub ↗</a><a href="https://edspace.american.edu/openbehavior/project/tetrodrive/" target="_blank" rel="noopener">OpenBehavior ↗</a></div>
       </div>
       <figure class="pfig reveal">
         <img src="assets/figures/fig_tetrodrive_device.jpeg" alt="TetrODrive components, assembly, and head-mounted use" loading="lazy" />
@@ -295,6 +306,7 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
         <span class="ptag">First author · J. Neural Eng. 2020</span>
         <h3>Transparent µECoG array</h3>
         <div class="venue">Brosch et al. · J. Neural Eng. 17:046014</div>
+        <p class="plain"><b>In plain terms:</b> a see-through electrode film that rests on the brain's surface, so we can record its electrical activity and shine light through it at the same time — thinner than a human hair and stable for months.</p>
         <p>An optically transparent multi-electrode array for simultaneous surface electrophysiology and optogenetics/imaging. Built from ultra-thin polyimide with chrome-gold-platinum traces, the array is just <strong>6.5&nbsp;µm thick</strong> and ~<strong>83% transparent</strong> to blue light, while rejecting opto-electric artifacts. It records stable ECoG <strong>over months</strong> without measurable degradation and maps the tonotopic organization of the curved rodent auditory cortex — a robust, low-cost alternative to fragile graphene/ITO devices.</p>
         <div class="chips">
           <span class="chip">Microfabrication</span><span class="chip">Materials / optics</span><span class="chip">ECoG &amp; voltage imaging</span><span class="chip">Chronic biocompatibility</span>
@@ -390,7 +402,7 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
       <div class="tl-item reveal">
         <div class="yr">2016 — 2022</div>
         <h3>Dr. rer. nat. (Doctorate in Natural Science) <span class="badge-summa">summa cum laude</span></h3>
-        <div class="org">Leibniz Institute for Neurobiology · OvGU Magdeburg, Germany</div>
+        <div class="org"><a href="https://www.lin-magdeburg.org/research/research-units/department-systems-physiology-of-learning/neuro-optics" target="_blank" rel="noopener">Leibniz Institute for Neurobiology (Neuro-Optics group)</a> · OvGU Magdeburg, Germany</div>
         <p>Developed neuroscience tools combining electrophysiology and optophysiology: a transparent µECoG array and the TetrODrive optrode microdrive. Advisors: Prof. F. Ohl, Dr. M. Lippert.</p>
       </div>
       <div class="tl-item reveal">
@@ -421,6 +433,7 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
           <div class="t">TetrODrive: an open-source microdrive for combined electrophysiology and optophysiology</div>
           <div class="a"><span class="me">Brosch M</span>, Vlasenko A, Ohl FW, Lippert MT</div>
           <div class="j">Journal of Neural Engineering 18:046030</div>
+          <div class="lk"><a href="https://pubmed.ncbi.nlm.nih.gov/33908896/" target="_blank" rel="noopener">PubMed ↗</a><a href="https://doi.org/10.1088/1741-2552/abf608" target="_blank" rel="noopener">Journal ↗</a><span class="cb">Cited by 5</span></div>
         </div>
       </div>
       <div class="pub">
@@ -429,6 +442,7 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
           <div class="t">An optically transparent multi-electrode array for combined electrophysiology and optophysiology at the mesoscopic scale</div>
           <div class="a"><span class="me">Brosch M</span>, Deckert M, Rathi S, Takagaki K, Weidner T, Ohl FW, Schmidt B, Lippert MT</div>
           <div class="j">Journal of Neural Engineering 17(4):046014</div>
+          <div class="lk"><a href="https://pubmed.ncbi.nlm.nih.gov/32705997/" target="_blank" rel="noopener">PubMed ↗</a><a href="https://doi.org/10.1088/1741-2552/aba1a4" target="_blank" rel="noopener">Journal ↗</a><span class="cb">Cited by 19</span></div>
         </div>
       </div>
       <div class="pub">
@@ -437,6 +451,7 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
           <div class="t">Rhodiola rosea root extract has antipsychotic-like effects in rodent models of sensorimotor gating</div>
           <div class="a">Coors A, <span class="me">Brosch M</span>, Kahl E, Khalil R, Michels B, Laub A, Franke K, Gerber B, Fendt M</div>
           <div class="j">Journal of Ethnopharmacology 235:320–328</div>
+          <div class="lk"><a href="https://pubmed.ncbi.nlm.nih.gov/30776471/" target="_blank" rel="noopener">PubMed ↗</a><a href="https://doi.org/10.1016/j.jep.2019.02.031" target="_blank" rel="noopener">Journal ↗</a><span class="cb">Cited by 29</span></div>
         </div>
       </div>
       <div class="pub">
@@ -445,6 +460,7 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
           <div class="t">Electrochemical roughening and carbon nanotube coating of tetrodes for chronic single-unit recording</div>
           <div class="a">Xia Z, Arias-Gil G, Deckert M, Vollmer M, Curran A, Herrera-Molina R, <span class="me">Brosch M</span>, Krug K, Schmidt B, Ohl FW, Lippert MT, Takagaki K</div>
           <div class="j">bioRxiv 738245</div>
+          <div class="lk"><a href="https://doi.org/10.1101/738245" target="_blank" rel="noopener">bioRxiv ↗</a></div>
         </div>
       </div>
       <div class="pub">
@@ -453,6 +469,7 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
           <div class="t">Predator odour but not TMT induces 22-kHz ultrasonic vocalizations in rats that lead to defensive behaviours in conspecifics upon replay</div>
           <div class="a">Fendt M, <span class="me">Brosch M</span>, Wernecke KEA, Willadsen M, Wöhr M</div>
           <div class="j">Scientific Reports 8(1):10041</div>
+          <div class="lk"><a href="https://pubmed.ncbi.nlm.nih.gov/30038341/" target="_blank" rel="noopener">PubMed ↗</a><a href="https://doi.org/10.1038/s41598-018-28927-4" target="_blank" rel="noopener">Journal ↗</a><span class="cb">Cited by 80</span></div>
         </div>
       </div>
       <div class="pub">
@@ -461,6 +478,7 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
           <div class="t">CAVE: an open-source tool for combined analysis of head-mounted calcium imaging and behavior in MATLAB</div>
           <div class="a">Tegtmeier J, <span class="me">Brosch M</span>, Janitzky K, Heinze H-J, Ohl FW, Lippert MT</div>
           <div class="j">Frontiers in Neuroscience 12:958</div>
+          <div class="lk"><a href="https://pubmed.ncbi.nlm.nih.gov/30618581/" target="_blank" rel="noopener">PubMed ↗</a><a href="https://doi.org/10.3389/fnins.2018.00958" target="_blank" rel="noopener">Journal ↗</a><span class="cb">Cited by 17</span></div>
         </div>
       </div>
       <div class="pub">
@@ -469,6 +487,7 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
           <div class="t">Neurobiological fundamentals of strategy change — a core competence of a companion system</div>
           <div class="a">Schulz AL, Woldeit ML, <span class="me">Brosch M</span>, Ohl FW</div>
           <div class="j">International Conference on Companion Technology (IEEE 8287074)</div>
+          <div class="lk"><a href="https://ieeexplore.ieee.org/document/8287074" target="_blank" rel="noopener">IEEE Xplore ↗</a></div>
         </div>
       </div>
     </div>
@@ -480,18 +499,18 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
   <div class="wrap">
     <p class="eyebrow" style="text-align:center">Contact</p>
     <h2 class="sec-title">Let's talk</h2>
-    <p class="sec-intro">Open to research and industry roles in neurotechnology, data science, and instrumentation. I'm happy to share my CV, code, or device designs.</p>
+    <p class="sec-intro">Open to roles in neurotech and biotech — spanning R&amp;D, instrumentation and hardware, and data science. I'm always glad to talk and happy to share my code or device designs.</p>
     <div class="contact-cards">
-      <a class="cc" href="mailto:marcelbrosch.mb@gmail.com">
-        <div class="k">Email</div><div class="v">marcelbrosch.mb@gmail.com</div>
+      <a class="cc" id="emailcard" href="#" rel="nofollow">
+        <div class="k">Email</div><div class="v" id="emailtxt">tap to email me</div>
       </a>
       <a class="cc" href="https://www.linkedin.com/in/marcel-brosch/" target="_blank" rel="noopener">
-        <div class="k">LinkedIn</div><div class="v">Marcel-Brosch</div>
+        <div class="k">LinkedIn</div><div class="v">in/marcel-brosch</div>
       </a>
       <a class="cc" href="https://github.com/miniscope" target="_blank" rel="noopener">
         <div class="k">GitHub</div><div class="v">Projects &amp; code</div>
       </a>
-      <a class="cc" href="https://scholar.google.com/" target="_blank" rel="noopener">
+      <a class="cc" href="https://scholar.google.com/citations?user=54OSLKgAAAAJ&hl=en" target="_blank" rel="noopener">
         <div class="k">Scholar</div><div class="v">Publications</div>
       </a>
     </div>
@@ -505,8 +524,11 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
 <script>
 document.getElementById('yr').textContent=new Date().getFullYear();
 document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
+(function(){var u='marcelbrosch.mb',d='gmail'+'.com',a=u+'@'+d,c=document.getElementById('emailcard');if(c){c.href='mailto:'+a;document.getElementById('emailtxt').textContent=a;}})();
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
+<!-- Cloudflare Web Analytics: paste your token below (Cloudflare dashboard → Analytics → Web Analytics → Add a site) -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "eca608cec6d24f58a20e58cfdba704a5"}'></script>
 </body>
 </html>
