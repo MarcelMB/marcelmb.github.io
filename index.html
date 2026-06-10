@@ -129,7 +129,13 @@ nav.links a:hover{color:var(--ink);text-decoration:none}
 .skill-card h3{font-size:17px;margin-bottom:14px;display:flex;align-items:center;gap:10px}
 .skill-card h3 .dot{width:9px;height:9px;border-radius:50%;background:var(--accent)}
 .skill-card .tags{display:flex;flex-wrap:wrap;gap:8px}
-.skill-card .tags span{font-size:13.5px;background:#fff;border:1px solid var(--line);padding:6px 12px;border-radius:8px;color:var(--ink-soft);font-weight:500}
+.skill-card .tags span{font-size:13.5px;background:#fff;border:1px solid var(--line);padding:6px 12px;border-radius:8px;color:var(--ink-soft);font-weight:500;position:relative;cursor:help;transition:.15s}
+.skill-card .tags span[data-tip]:hover,.skill-card .tags span[data-tip]:focus{border-color:var(--accent);color:var(--accent-dk);background:var(--accent-soft);outline:none}
+.skill-card .tags span[data-tip]::after{content:attr(data-tip);position:absolute;left:0;bottom:calc(100% + 10px);transform:translateY(4px);background:var(--ink);color:#fff;font-size:12.5px;font-weight:500;line-height:1.45;white-space:normal;width:max-content;max-width:240px;text-align:left;padding:8px 11px;border-radius:8px;box-shadow:var(--shadow-lg);opacity:0;pointer-events:none;transition:opacity .15s,transform .15s;z-index:30}
+.skill-card .tags span[data-tip]::before{content:"";position:absolute;left:18px;bottom:calc(100% + 4px);transform:translateX(-50%);border:6px solid transparent;border-top-color:var(--ink);opacity:0;transition:opacity .15s;z-index:30}
+.skill-card .tags span[data-tip]:hover::after,.skill-card .tags span[data-tip]:focus::after{opacity:1;transform:translateY(0)}
+.skill-card .tags span[data-tip]:hover::before,.skill-card .tags span[data-tip]:focus::before{opacity:1}
+.badge-award{display:inline-block;font-size:11.5px;font-weight:600;color:var(--accent-dk);background:var(--accent-soft);border:1px solid #c7dbfb;padding:2px 9px;border-radius:999px;margin-left:8px;vertical-align:middle}
 @media(max-width:680px){.skills-grid{grid-template-columns:1fr}}
 
 .timeline{position:relative;padding-left:28px}
@@ -215,7 +221,7 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
 <section id="stats" style="border-top:0;padding-top:0">
   <div class="wrap">
     <div class="stats">
-      <div class="stat reveal"><div class="n">PhD</div><div class="l">summa cum laude, Neuroscience</div></div>
+      <div class="stat reveal"><div class="n">PhD</div><div class="l">summa cum laude · faculty thesis prize</div></div>
       <div class="stat reveal"><div class="n">7+</div><div class="l">peer-reviewed publications</div></div>
       <div class="stat reveal"><div class="n">150+</div><div class="l">citations · h-index 4 (Scholar)</div></div>
       <div class="stat reveal"><div class="n">UCLA</div><div class="l">current postdoc, Aharoni Lab</div></div>
@@ -232,7 +238,7 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
         <p>I'm a neuroscientist and tool developer who turns hard measurement problems into devices and software people can actually use. My work sits at the intersection of <strong>optics, electronics, microfabrication, and data science</strong> — building instruments that record the brain with higher fidelity, lower cost, and fewer constraints on natural behavior.</p>
         <p>During my PhD (<strong>summa cum laude</strong>) at the Leibniz Institute for Neurobiology in Germany, I developed two open-source neural recording devices: a <strong>transparent µECoG array</strong> for combined electrophysiology and optical imaging, and <strong>TetrODrive</strong>, a 3D-printed microdrive that costs under <strong>$25</strong>. Both were published as first-author papers and are used by other labs.</p>
         <p>As a postdoc in the <strong>Aharoni Lab at UCLA</strong>, I co-lead <strong>Miniscope Zero</strong> — a fully wireless, single-cell-resolution miniature microscope that frees neural imaging from tethers and large batteries. Alongside the hardware I build the data-acquisition and analysis software that goes with it. I also completed a full-time <strong>data analytics bootcamp</strong> (Python, ML, SQL), reflecting where I want to take these skills next: solving applied problems where rigor, prototyping, and data fluency matter.</p>
-        <p>I care about making technology accessible and staying involved in the science community. I co-founded a science-communication blog for the public, served as <strong>PhD student representative for 50+ graduate students</strong>, and review for <strong>Nature Methods</strong>.</p>
+        <p>I care about making technology accessible and staying involved in the science community. I co-founded <a href="https://cbbsgp.med.ovgu.de/simpleneuro-blog-of-lin-phd-students/" target="_blank" rel="noopener">SimpleNeuro</a>, a science-communication blog written by young researchers for the public (<a href="https://web.archive.org/web/20230515225645/https://simpleneuro.org/" target="_blank" rel="noopener">archived</a>), served as <strong>PhD student representative for 50+ graduate students</strong>, and review for <strong>Nature Methods</strong>.</p>
       </div>
       <aside class="card-side reveal">
         <h3>At a glance</h3>
@@ -352,30 +358,30 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
   <div class="wrap">
     <p class="eyebrow">Capabilities</p>
     <h2 class="sec-title">What I bring to a team</h2>
-    <p class="sec-intro">A rare combination of scientific rigor and hands-on building — from data pipelines and software to physical prototypes that ship and get used.</p>
+    <p class="sec-intro">A rare combination of scientific rigor and hands-on building — from data pipelines and software to physical prototypes that ship and get used. <span style="color:var(--accent);font-weight:600">Hover any skill to see the projects behind it.</span></p>
     <div class="skills-grid">
       <div class="skill-card reveal">
         <h3><span class="dot"></span>Software &amp; Programming</h3>
         <div class="tags">
-          <span>Python</span><span>Pandas / NumPy</span><span>scikit-learn (ML)</span><span>MATLAB</span><span>C / C++ (embedded)</span><span>MySQL</span><span>GUI development</span><span>Signal &amp; image processing</span><span>Git / GitHub</span><span>Open-source maintenance</span><span>APIs &amp; web scraping</span><span>Data visualization</span>
+          <span tabindex="0" data-tip="Used in: Miniscope Zero analysis · mio · CaTune">Python</span><span tabindex="0" data-tip="Used in: Miniscope Zero data analysis · mio">Pandas / NumPy</span><span tabindex="0" data-tip="Used in: Data Analytics training (Ironhack)">scikit-learn (ML)</span><span tabindex="0" data-tip="Used in: CAVE · µECoG &amp; MSc-thesis analysis">MATLAB</span><span tabindex="0" data-tip="Used in: Miniscope Zero firmware · mio">C / C++ (embedded)</span><span tabindex="0" data-tip="Used in: Data Analytics training (Ironhack)">MySQL</span><span tabindex="0" data-tip="Used in: CaTune · CAVE · mio">GUI development</span><span tabindex="0" data-tip="Used in: Miniscope Zero · CAVE · µECoG array">Signal &amp; image processing</span><span tabindex="0" data-tip="Used in: mio · CaTune · TetrODrive (all open source)">Git / GitHub</span><span tabindex="0" data-tip="Used in: mio · TetrODrive · CAVE">Open-source maintenance</span><span tabindex="0" data-tip="Used in: Data Analytics training (Ironhack)">APIs &amp; web scraping</span><span tabindex="0" data-tip="Used in: CaTune · CAVE · Miniscope Zero">Data visualization</span>
         </div>
       </div>
       <div class="skill-card reveal">
         <h3><span class="dot"></span>Hardware &amp; Engineering</h3>
         <div class="tags">
-          <span>CAD &amp; 3D printing</span><span>Microfabrication</span><span>PCB / electronics</span><span>Optical design</span><span>Embedded firmware</span><span>Wireless power &amp; data</span><span>Rapid prototyping</span><span>Device validation</span>
+          <span tabindex="0" data-tip="Used in: TetrODrive · Miniscope Zero">CAD &amp; 3D printing</span><span tabindex="0" data-tip="Used in: Transparent µECoG array">Microfabrication</span><span tabindex="0" data-tip="Used in: Miniscope Zero · TetrODrive">PCB / electronics</span><span tabindex="0" data-tip="Used in: Miniscope Zero · µECoG array">Optical design</span><span tabindex="0" data-tip="Used in: Miniscope Zero">Embedded firmware</span><span tabindex="0" data-tip="Used in: Miniscope Zero">Wireless power &amp; data</span><span tabindex="0" data-tip="Used in: TetrODrive · Miniscope Zero">Rapid prototyping</span><span tabindex="0" data-tip="Used in: Miniscope Zero · TetrODrive · µECoG array">Device validation</span>
         </div>
       </div>
       <div class="skill-card reveal">
         <h3><span class="dot"></span>Neuroscience Methods</h3>
         <div class="tags">
-          <span>1-photon calcium imaging</span><span>In vivo electrophysiology</span><span>Optogenetics</span><span>ECoG / tetrodes</span><span>Fiber photometry</span><span>Stereotactic surgery</span><span>Histology</span><span>Behavioral assays</span>
+          <span tabindex="0" data-tip="Used in: Miniscope Zero · CaTune · CAVE">1-photon calcium imaging</span><span tabindex="0" data-tip="Used in: TetrODrive · µECoG array · MSc thesis">In vivo electrophysiology</span><span tabindex="0" data-tip="Used in: TetrODrive · µECoG array">Optogenetics</span><span tabindex="0" data-tip="Used in: µECoG array · TetrODrive · MSc thesis">ECoG / tetrodes</span><span tabindex="0" data-tip="Used in: TetrODrive">Fiber photometry</span><span tabindex="0" data-tip="Used in: Miniscope Zero · TetrODrive · µECoG array">Stereotactic surgery</span><span tabindex="0" data-tip="Used in: µECoG array · TetrODrive">Histology</span><span tabindex="0" data-tip="Used in: Miniscope Zero · MSc &amp; BSc theses">Behavioral assays</span>
         </div>
       </div>
       <div class="skill-card reveal">
         <h3><span class="dot"></span>Communication &amp; Leadership</h3>
         <div class="tags">
-          <span>Scientific writing</span><span>Peer review (Nature Methods)</span><span>Invited talks</span><span>Science communication</span><span>Mentoring</span><span>Project leadership</span><span>Cross-disciplinary collaboration</span>
+          <span tabindex="0" data-tip="Behind: 7+ publications &amp; three theses">Scientific writing</span><span tabindex="0" data-tip="Journal manuscript reviewer">Peer review (Nature Methods)</span><span tabindex="0" data-tip="German Neuroscience Meeting · Physiology Society">Invited talks</span><span tabindex="0" data-tip="Co-founded SimpleNeuro science blog · public outreach">Science communication</span><span tabindex="0" data-tip="PhD student representative (50+ students)">Mentoring</span><span tabindex="0" data-tip="Used in: Miniscope Zero · TetrODrive">Project leadership</span><span tabindex="0" data-tip="Miniscope Zero (UCLA ↔ Univ. Tokyo)">Cross-disciplinary collaboration</span>
         </div>
       </div>
     </div>
@@ -401,9 +407,9 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
       </div>
       <div class="tl-item reveal">
         <div class="yr">2016 — 2022</div>
-        <h3>Dr. rer. nat. (Doctorate in Natural Science) <span class="badge-summa">summa cum laude</span></h3>
+        <h3>Dr. rer. nat. (Doctorate in Natural Science) <span class="badge-summa">summa cum laude</span> <span class="badge-award">🏆 Faculty Prize — Best PhD Thesis</span></h3>
         <div class="org"><a href="https://www.lin-magdeburg.org/research/research-units/department-systems-physiology-of-learning/neuro-optics" target="_blank" rel="noopener">Leibniz Institute for Neurobiology (Neuro-Optics group)</a> · OvGU Magdeburg, Germany</div>
-        <p>Developed neuroscience tools combining electrophysiology and optophysiology: a transparent µECoG array and the TetrODrive optrode microdrive. Advisors: Prof. F. Ohl, Dr. M. Lippert.</p>
+        <p>Developed neuroscience tools combining electrophysiology and optophysiology: a transparent µECoG array and the TetrODrive optrode microdrive. Awarded the Faculty of Biology’s <em>Promotionspreis</em> for the best doctoral dissertation of the year. Advisors: Prof. F. Ohl, Dr. M. Lippert.</p>
       </div>
       <div class="tl-item reveal">
         <div class="yr">2013 — 2016</div>
