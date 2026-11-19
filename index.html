@@ -3,16 +3,24 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Dr. Marcel Brosch — Neuroscientist & Neural Engineer</title>
-<meta name="description" content="Dr. Marcel Brosch — neuroscientist and neural-engineering tool developer. Postdoctoral researcher at UCLA building wireless miniature microscopes, open-source neural devices, and scientific software." />
+<title>Marcel Brosch — Miniscope Zero co-lead · Neuroscientist &amp; Neural Engineer (UCLA)</title>
+<meta name="description" content="Dr. Marcel Brosch, co-lead and co-first author of Miniscope Zero, a fully wireless, single-cell-resolution miniature microscope (bioRxiv 2026). Postdoc at UCLA (Aharoni Lab) building wireless miniscopes, open-source neural devices, and scientific software." />
+<meta name="author" content="Marcel Brosch" />
 <link rel="canonical" href="https://marcelbrosch.com/" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Crect%20width%3D%27100%27%20height%3D%27100%27%20rx%3D%2722%27%20fill%3D%27%231f6feb%27/%3E%3Ctext%20x%3D%2750%27%20y%3D%2754%27%20dy%3D%27.05em%27%20text-anchor%3D%27middle%27%20font-family%3D%27Helvetica%2CArial%2Csans-serif%27%20font-size%3D%2744%27%20font-weight%3D%27700%27%20fill%3D%27%23ffffff%27%3EMB%3C/text%3E%3C/svg%3E" />
-<meta property="og:title" content="Dr. Marcel Brosch — Neuroscientist & Neural Engineer" />
-<meta property="og:description" content="Building tools that record the brain: wireless miniature microscopes, transparent electrode arrays, open-source hardware, and scientific software." />
-<meta property="og:type" content="website" />
+<meta property="og:title" content="Marcel Brosch — Miniscope Zero co-lead · Neuroscientist &amp; Neural Engineer" />
+<meta property="og:description" content="Co-lead of Miniscope Zero, a fully wireless single-cell-resolution miniscope. Building tools that record the brain: wireless miniature microscopes, open-source hardware, and scientific software." />
+<meta property="og:type" content="profile" />
+<meta property="og:site_name" content="Marcel Brosch" />
 <meta property="og:url" content="https://marcelbrosch.com/" />
+<meta property="og:image" content="https://marcelbrosch.com/assets/figures/fig_miniscopezero_overview.jpeg" />
+<meta property="og:image:alt" content="Miniscope Zero system architecture: wireless power cavity, optical data link, and miniscope optics" />
+<meta property="profile:first_name" content="Marcel" />
+<meta property="profile:last_name" content="Brosch" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
+<meta name="twitter:title" content="Marcel Brosch — Miniscope Zero co-lead" />
+<meta name="twitter:description" content="Co-lead of Miniscope Zero, a fully wireless single-cell-resolution miniature microscope (bioRxiv 2026)." />
+<meta name="twitter:image" content="https://marcelbrosch.com/assets/figures/fig_miniscopezero_overview.jpeg" /><link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
@@ -118,7 +126,7 @@ nav.links a:hover{color:var(--ink);text-decoration:none}
 .videocap{font-size:13px;color:var(--ink-faint);padding:12px 16px;background:var(--bg-soft);border-top:1px solid var(--line)}
 
 /* software cards */
-.soft-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.soft-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .soft-card{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;transition:.15s}
 .soft-card:hover{box-shadow:var(--shadow);transform:translateY(-2px);text-decoration:none}
 .soft-card .k{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
@@ -187,22 +195,60 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Dr. Marcel Brosch",
-  "url": "https://marcelbrosch.com",
-  "image": "https://marcelbrosch.com/assets/figures/fig_miniscopezero_overview.jpeg",
-  "jobTitle": "Neuroscientist & Neural-Engineering Tool Developer",
-  "worksFor": { "@type": "Organization", "name": "UCLA (Aharoni Lab)" },
-  "alumniOf": [
-    { "@type": "CollegeOrUniversity", "name": "Otto-von-Guericke University Magdeburg" },
-    { "@type": "CollegeOrUniversity", "name": "Friedrich Schiller University Jena" }
-  ],
-  "knowsAbout": ["Neuroscience","Neural engineering","Calcium imaging","Wireless miniature microscopes","Electrophysiology","Data science","Python","MATLAB"],
-  "sameAs": [
-    "https://www.linkedin.com/in/marcel-brosch/",
-    "https://orcid.org/0000-0001-7471-8646",
-    "https://scholar.google.com/citations?user=54OSLKgAAAAJ&hl=en",
-    "https://github.com/miniscope"
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://marcelbrosch.com/#person",
+      "name": "Marcel Brosch",
+      "honorificPrefix": "Dr.",
+      "givenName": "Marcel",
+      "familyName": "Brosch",
+      "url": "https://marcelbrosch.com/",
+      "image": "https://marcelbrosch.com/assets/profile.jpg",
+      "jobTitle": "Postdoctoral Researcher — Neuroscientist & Neural-Engineering Tool Developer",
+      "description": "Co-lead and co-first author of Miniscope Zero, a fully wireless, single-cell-resolution miniature microscope.",
+      "worksFor": { "@type": "Organization", "name": "Aharoni Lab, University of California, Los Angeles (UCLA)", "url": "https://aharoni-lab.com/" },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Otto-von-Guericke University Magdeburg" },
+        { "@type": "CollegeOrUniversity", "name": "Friedrich Schiller University Jena" }
+      ],
+      "knowsAbout": ["Miniscope Zero","Miniscopes","Wireless miniature microscopes","One-photon calcium imaging","Neuroscience","Neural engineering","Optical wireless data links","Electrophysiology","Data science","Python","MATLAB"],
+      "sameAs": [
+        "https://github.com/MarcelMB",
+        "https://www.linkedin.com/in/marcel-brosch/",
+        "https://orcid.org/0000-0001-7471-8646",
+        "https://scholar.google.com/citations?user=54OSLKgAAAAJ&hl=en"
+      ]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.64898/2026.09.05.745822",
+      "headline": "Miniscope Zero: a fully wireless, single-cell-resolution miniature microscope for imaging neural dynamics in freely behaving animals",
+      "datePublished": "2026-09-11",
+      "publisher": { "@type": "Organization", "name": "bioRxiv" },
+      "url": "https://doi.org/10.64898/2026.09.05.745822",
+      "sameAs": ["https://pubmed.ncbi.nlm.nih.gov/42818601/"],
+      "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.64898/2026.09.05.745822" },
+      "author": [
+        { "@type": "Person", "name": "Takuya Sasatani", "url": "https://www.takuyasasatani.com/" },
+        { "@id": "https://marcelbrosch.com/#person" }
+      ],
+      "about": { "@id": "https://github.com/miniscope/MiniscopeZero" }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://github.com/miniscope/MiniscopeZero",
+      "name": "Miniscope Zero",
+      "description": "Open-source hardware and software for Miniscope Zero, a fully wireless one-photon miniature microscope with QSCR wireless power and an optical data uplink.",
+      "codeRepository": "https://github.com/miniscope/MiniscopeZero",
+      "url": "https://miniscope.org/wiki/Miniscope_Zero",
+      "license": "https://spdx.org/licenses/CERN-OHL-S-2.0.html",
+      "creator": [
+        { "@type": "Person", "name": "Takuya Sasatani" },
+        { "@id": "https://marcelbrosch.com/#person" }
+      ],
+      "citation": { "@id": "https://doi.org/10.64898/2026.09.05.745822" }
+    }
   ]
 }
 </script>
@@ -239,7 +285,8 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
       </div>
       <div class="social">
         <a href="https://www.linkedin.com/in/marcel-brosch/" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a href="https://github.com/miniscope" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://github.com/MarcelMB" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://github.com/miniscope/MiniscopeZero" target="_blank" rel="noopener">Miniscope Zero ↗</a>
         <a href="https://scholar.google.com/citations?user=54OSLKgAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>
         <a href="https://orcid.org/0000-0001-7471-8646" target="_blank" rel="noopener">ORCID ↗</a>
       </div>
@@ -269,7 +316,7 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
       <div>
         <p>I'm a neuroscientist and tool developer who turns hard measurement problems into devices and software people can actually use. My work sits at the intersection of <strong>optics, electronics, microfabrication, and data science</strong> — building instruments that record the brain with higher fidelity, lower cost, and fewer constraints on natural behavior.</p>
         <p>During my PhD (<strong>summa cum laude</strong>) at the Leibniz Institute for Neurobiology in Germany, I developed two open-source neural recording devices: a <strong>transparent µECoG array</strong> for combined electrophysiology and optical imaging, and <strong>TetrODrive</strong>, a 3D-printed microdrive that costs under <strong>$25</strong>. Both were published as first-author papers and are used by other labs.</p>
-        <p>As a postdoc in the <strong>Aharoni Lab at UCLA</strong>, I co-lead <strong>Miniscope Zero</strong> — a fully wireless, single-cell-resolution miniature microscope that frees neural imaging from tethers and large batteries. Alongside the hardware I build the data-acquisition and analysis software that goes with it. I also completed a full-time <strong>data analytics bootcamp</strong> (Python, ML, SQL), reflecting where I want to take these skills next: solving applied problems where rigor, prototyping, and data fluency matter.</p>
+        <p>As a postdoc in the <strong>Aharoni Lab at UCLA</strong>, I co-lead <strong><a href="#proj-miniscope">Miniscope Zero</a></strong> (<a href="https://doi.org/10.64898/2026.09.05.745822" target="_blank" rel="noopener">bioRxiv preprint</a> · <a href="https://github.com/miniscope/MiniscopeZero" target="_blank" rel="noopener">GitHub</a>) — a fully wireless, single-cell-resolution miniature microscope that frees neural imaging from tethers and large batteries. Alongside the hardware I build the data-acquisition and analysis software that goes with it. I also completed a full-time <strong>data analytics bootcamp</strong> (Python, ML, SQL), reflecting where I want to take these skills next: solving applied problems where rigor, prototyping, and data fluency matter.</p>
         <p>I care about making technology accessible and staying involved in the science community. I co-founded <a href="https://cbbsgp.med.ovgu.de/simpleneuro-blog-of-lin-phd-students/" target="_blank" rel="noopener">SimpleNeuro</a>, a science-communication blog written by young researchers for the public (<a href="https://web.archive.org/web/20230515225645/https://simpleneuro.org/" target="_blank" rel="noopener">archived</a>), served as <strong>PhD student representative for 50+ graduate students</strong>, and review for <strong>Nature Methods</strong>.</p>
       </div>
       <aside class="card-side reveal">
@@ -295,14 +342,21 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
     <!-- Miniscope Zero with video -->
     <div class="proj">
       <div class="ptext">
-        <span class="ptag">Current · UCLA · Co-first author (in preparation)</span>
+        <span class="ptag">Current · UCLA · Co-first author · bioRxiv 2026</span>
         <h3 id="proj-miniscope">Miniscope Zero — fully wireless brain imaging</h3>
-        <div class="venue">Sasatani &amp; Brosch et al. · <a href="https://aharoni-lab.com/" target="_blank" rel="noopener">Aharoni Lab</a>, UCLA</div>
+        <div class="venue">Sasatani, Brosch et al., <a href="https://doi.org/10.64898/2026.09.05.745822" target="_blank" rel="noopener"><i>bioRxiv</i> (2026)</a> · <a href="https://aharoni-lab.com/" target="_blank" rel="noopener">Aharoni Lab</a>, UCLA</div>
         <p class="plain"><b>In plain terms:</b> a tiny microscope worn on a mouse's head lets us watch individual brain cells light up while the animal moves freely — and we made it work with no cables or heavy batteries holding it back.</p>
         <p>A head-mounted, single-photon miniature microscope that records single-cell neural dynamics in freely behaving mice with <strong>no tether and no bulky battery</strong>. Power is delivered wirelessly via Quasistatic Cavity Resonance (&gt;500&nbsp;mW over 2,500&nbsp;cm²) and data streams over an 8&nbsp;Mbps optical uplink. Upgraded optics deliver <strong>2.6× the light-collection</strong> of the UCLA Miniscope v4, enabling multi-hour CA1 recordings during 3D-maze navigation and multi-animal social interaction.</p>
         <p style="font-size:15px;color:var(--ink-faint)">Co-first-authored with <a href="https://www.takuyasasatani.com/" target="_blank" rel="noopener">Takuya Sasatani</a> (University of Tokyo). I led the <strong style="color:var(--ink-soft)">miniature microscope and wireless data link</strong>; wireless power was developed in collaboration with Takuya.</p>
         <div class="chips">
           <span class="chip">Optical design</span><span class="chip">Wireless data link</span><span class="chip">Embedded firmware</span><span class="chip">Calcium imaging</span><span class="chip">Place-cell analysis</span>
+        </div>
+        <div class="plinks">
+          <a href="https://doi.org/10.64898/2026.09.05.745822" target="_blank" rel="noopener">Preprint (bioRxiv) ↗</a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42818601/" target="_blank" rel="noopener">PubMed ↗</a>
+          <a href="https://github.com/miniscope/MiniscopeZero" target="_blank" rel="noopener">Hardware &amp; software (GitHub) ↗</a>
+          <a href="https://miniscope.org/wiki/Miniscope_Zero" target="_blank" rel="noopener">Build docs (miniscope.org) ↗</a>
+          <a href="https://doi.org/10.25346/S6VGDP7C" target="_blank" rel="noopener">Data ↗</a>
         </div>
       </div>
       <figure class="pfig reveal">
@@ -364,6 +418,12 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
     <h2 class="sec-title">Code that powers the science</h2>
     <p class="sec-intro">Beyond hardware, I build and contribute to the software stack around neural imaging — from data acquisition to analysis GUIs — much of it open source and used across the Miniscope community.</p>
     <div class="soft-grid">
+      <a id="soft-cala" class="soft-card reveal" href="https://miniscope.github.io/CaLab/Cala/" target="_blank" rel="noopener">
+        <div class="k">Browser app · Beta · Rust + WebAssembly</div>
+        <h3>Cala</h3>
+        <p>Streaming cell finding for one-photon Miniscope recordings, entirely in the browser. Open a raw Miniscope AVI folder and Cala runs preprocessing, motion correction (WebGPU where available), cell discovery, demixed trace extraction, and live quality control frame by frame. Nothing to install, and no data leaves your machine.</p>
+        <span class="lk">Launch Cala ↗</span>
+      </a>
       <a id="soft-catune" class="soft-card reveal" href="https://miniscope.github.io/CaLab/CaTune/" target="_blank" rel="noopener">
         <div class="k">GUI · Aharoni Lab collaboration</div>
         <h3>CaTune</h3>
@@ -395,7 +455,7 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
       <div class="skill-card reveal">
         <h3><span class="dot"></span>Software &amp; Programming</h3>
         <div class="tags">
-          <span class="sk" tabindex="0">Python<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#soft-mio">mio</a><a href="#soft-catune">CaTune</a></span></span><span class="sk" tabindex="0">Pandas / NumPy<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#soft-mio">mio</a></span></span><span class="sk" tabindex="0">scikit-learn (ML)<span class="tip"><i>From</i><a href="#experience">Data Analytics training (Ironhack)</a></span></span><span class="sk" tabindex="0">MATLAB<span class="tip"><i>Used in</i><a href="#soft-cave">CAVE</a><a href="#proj-ecog">µECoG array</a><a href="#experience">MSc thesis</a></span></span><span class="sk" tabindex="0">C / C++ (embedded)<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#soft-mio">mio</a></span></span><span class="sk" tabindex="0">MySQL<span class="tip"><i>From</i><a href="#experience">Data Analytics training (Ironhack)</a></span></span><span class="sk" tabindex="0">GUI development<span class="tip"><i>Used in</i><a href="#soft-catune">CaTune</a><a href="#soft-cave">CAVE</a><a href="#soft-mio">mio</a></span></span><span class="sk" tabindex="0">Signal &amp; image processing<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#soft-cave">CAVE</a><a href="#proj-ecog">µECoG array</a></span></span><span class="sk" tabindex="0">Git / GitHub<span class="tip"><i>Used in</i><a href="#soft-mio">mio</a><a href="#soft-catune">CaTune</a><a href="#proj-tetrodrive">TetrODrive</a></span></span><span class="sk" tabindex="0">Open-source maintenance<span class="tip"><i>Used in</i><a href="#soft-mio">mio</a><a href="#proj-tetrodrive">TetrODrive</a><a href="#soft-cave">CAVE</a></span></span><span class="sk" tabindex="0">APIs &amp; web scraping<span class="tip"><i>From</i><a href="#experience">Data Analytics training (Ironhack)</a></span></span><span class="sk" tabindex="0">Data visualization<span class="tip"><i>Used in</i><a href="#soft-catune">CaTune</a><a href="#soft-cave">CAVE</a><a href="#proj-miniscope">Miniscope Zero</a></span></span>
+          <span class="sk" tabindex="0">Python<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#soft-mio">mio</a><a href="#soft-catune">CaTune</a></span></span><span class="sk" tabindex="0">Pandas / NumPy<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#soft-mio">mio</a></span></span><span class="sk" tabindex="0">scikit-learn (ML)<span class="tip"><i>From</i><a href="#experience">Data Analytics training (Ironhack)</a></span></span><span class="sk" tabindex="0">MATLAB<span class="tip"><i>Used in</i><a href="#soft-cave">CAVE</a><a href="#proj-ecog">µECoG array</a><a href="#experience">MSc thesis</a></span></span><span class="sk" tabindex="0">C / C++ (embedded)<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#soft-mio">mio</a></span></span><span class="sk" tabindex="0">MySQL<span class="tip"><i>From</i><a href="#experience">Data Analytics training (Ironhack)</a></span></span><span class="sk" tabindex="0">GUI development<span class="tip"><i>Used in</i><a href="#soft-cala">Cala</a><a href="#soft-catune">CaTune</a><a href="#soft-cave">CAVE</a><a href="#soft-mio">mio</a></span></span><span class="sk" tabindex="0">Signal &amp; image processing<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#soft-cala">Cala</a><a href="#soft-cave">CAVE</a><a href="#proj-ecog">µECoG array</a></span></span><span class="sk" tabindex="0">Git / GitHub<span class="tip"><i>Used in</i><a href="#soft-mio">mio</a><a href="#soft-catune">CaTune</a><a href="#proj-tetrodrive">TetrODrive</a></span></span><span class="sk" tabindex="0">Open-source maintenance<span class="tip"><i>Used in</i><a href="#soft-mio">mio</a><a href="#proj-tetrodrive">TetrODrive</a><a href="#soft-cave">CAVE</a></span></span><span class="sk" tabindex="0">APIs &amp; web scraping<span class="tip"><i>From</i><a href="#experience">Data Analytics training (Ironhack)</a></span></span><span class="sk" tabindex="0">Data visualization<span class="tip"><i>Used in</i><a href="#soft-catune">CaTune</a><a href="#soft-cave">CAVE</a><a href="#proj-miniscope">Miniscope Zero</a></span></span>
         </div>
       </div>
       <div class="skill-card reveal">
@@ -407,7 +467,7 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
       <div class="skill-card reveal">
         <h3><span class="dot"></span>Neuroscience Methods</h3>
         <div class="tags">
-          <span class="sk" tabindex="0">1-photon calcium imaging<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#soft-catune">CaTune</a><a href="#soft-cave">CAVE</a></span></span><span class="sk" tabindex="0">In vivo electrophysiology<span class="tip"><i>Used in</i><a href="#proj-tetrodrive">TetrODrive</a><a href="#proj-ecog">µECoG array</a><a href="#experience">MSc thesis</a></span></span><span class="sk" tabindex="0">Optogenetics<span class="tip"><i>Used in</i><a href="#proj-tetrodrive">TetrODrive</a><a href="#proj-ecog">µECoG array</a></span></span><span class="sk" tabindex="0">ECoG / tetrodes<span class="tip"><i>Used in</i><a href="#proj-ecog">µECoG array</a><a href="#proj-tetrodrive">TetrODrive</a><a href="#experience">MSc thesis</a></span></span><span class="sk" tabindex="0">Fiber photometry<span class="tip"><i>Used in</i><a href="#proj-tetrodrive">TetrODrive</a></span></span><span class="sk" tabindex="0">Stereotactic surgery<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#proj-tetrodrive">TetrODrive</a><a href="#proj-ecog">µECoG array</a></span></span><span class="sk" tabindex="0">Histology<span class="tip"><i>Used in</i><a href="#proj-ecog">µECoG array</a><a href="#proj-tetrodrive">TetrODrive</a></span></span><span class="sk" tabindex="0">Behavioral assays<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#experience">MSc &amp; BSc theses</a></span></span>
+          <span class="sk" tabindex="0">1-photon calcium imaging<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#soft-cala">Cala</a><a href="#soft-catune">CaTune</a><a href="#soft-cave">CAVE</a></span></span><span class="sk" tabindex="0">In vivo electrophysiology<span class="tip"><i>Used in</i><a href="#proj-tetrodrive">TetrODrive</a><a href="#proj-ecog">µECoG array</a><a href="#experience">MSc thesis</a></span></span><span class="sk" tabindex="0">Optogenetics<span class="tip"><i>Used in</i><a href="#proj-tetrodrive">TetrODrive</a><a href="#proj-ecog">µECoG array</a></span></span><span class="sk" tabindex="0">ECoG / tetrodes<span class="tip"><i>Used in</i><a href="#proj-ecog">µECoG array</a><a href="#proj-tetrodrive">TetrODrive</a><a href="#experience">MSc thesis</a></span></span><span class="sk" tabindex="0">Fiber photometry<span class="tip"><i>Used in</i><a href="#proj-tetrodrive">TetrODrive</a></span></span><span class="sk" tabindex="0">Stereotactic surgery<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#proj-tetrodrive">TetrODrive</a><a href="#proj-ecog">µECoG array</a></span></span><span class="sk" tabindex="0">Histology<span class="tip"><i>Used in</i><a href="#proj-ecog">µECoG array</a><a href="#proj-tetrodrive">TetrODrive</a></span></span><span class="sk" tabindex="0">Behavioral assays<span class="tip"><i>Used in</i><a href="#proj-miniscope">Miniscope Zero</a><a href="#experience">MSc &amp; BSc theses</a></span></span>
         </div>
       </div>
       <div class="skill-card reveal">
@@ -462,9 +522,18 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
 <section id="publications">
   <div class="wrap">
     <p class="eyebrow">Publications</p>
-    <h2 class="sec-title">Peer-reviewed work</h2>
-    <p class="sec-intro">Selected journal articles and conference papers. First-author work in bold.</p>
+    <h2 class="sec-title">Papers &amp; preprints</h2>
+    <p class="sec-intro">Selected preprints, journal articles, and conference papers. First-author work in bold.</p>
     <div class="pub-list">
+      <div class="pub">
+        <div class="yr">2026</div>
+        <div class="meta">
+          <div class="t">Miniscope Zero: a fully wireless, single-cell-resolution miniature microscope for imaging neural dynamics in freely behaving animals</div>
+          <div class="a">Sasatani T*, <span class="me">Brosch M*</span>, Dong Z, Saunders J, Zhao P, Sehgal M, Oesch LT, Sangiuliano Jimka F, Semwal H, Guha A, Chorsi H, Keus K, Madruga BA, Silva AJ, Churchland AK, Golshani P, Aharoni D <span style="color:var(--ink-faint)">(*co-first authors)</span></div>
+          <div class="j">bioRxiv preprint · doi:10.64898/2026.09.05.745822</div>
+          <div class="lk"><a href="https://doi.org/10.64898/2026.09.05.745822" target="_blank" rel="noopener">bioRxiv ↗</a><a href="https://pubmed.ncbi.nlm.nih.gov/42818601/" target="_blank" rel="noopener">PubMed ↗</a><a href="https://github.com/miniscope/MiniscopeZero" target="_blank" rel="noopener">GitHub ↗</a><a href="https://miniscope.org/wiki/Miniscope_Zero" target="_blank" rel="noopener">miniscope.org ↗</a></div>
+        </div>
+      </div>
       <div class="pub">
         <div class="yr">2026</div>
         <div class="meta">
@@ -547,7 +616,7 @@ footer{padding:40px 0;text-align:center;color:var(--ink-faint);font-size:14px;bo
         </div>
       </div>
     </div>
-    <p class="pub-note">Plus the Miniscope Zero wireless-imaging manuscript in preparation (co-first author, UCLA). Invited talks include the German Neuroscience Meeting (2019) and the German Physiology Society (2016); Best Talk Award, Young Physiologists Symposium (2015).</p>
+    <p class="pub-note">Invited talks include the German Neuroscience Meeting (2019) and the German Physiology Society (2016); Best Talk Award, Young Physiologists Symposium (2015).</p>
   </div>
 </section>
 
